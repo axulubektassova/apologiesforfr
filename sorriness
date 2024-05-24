@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apology Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #FF69B4;
+        }
+
+        button {
+            background-color: #FF69B4;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #D35400;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Step 1: First Page -->
+    <div id="firstPage">
+        <h1>Нажмите и произойдет чудо (надеюсь)))</h1>
+        <button onclick="showApology()">Нажмите для продолжения</button>
+ <img src="https://pin.it/28fbA7Bx4" alt="Извинениe2">
+    </div>
+
+    <!-- Step 2: Second Page -->
+    <div id="secondPage" style="display: none;">
+        <h1>Sorry that happened, hopefully waiting for you to forgive me. Pls don’t be offended 💐</h1>
+        <button onclick="showCompliment()">Если хотите узнать какая Вы, нажмите 🤘🏻</button>
+        <img src="https://pin.it/2K6DB1jeb" alt="Извинение">
+    </div>
+
+</div>
+
+<script>
+    function showApology() {
+        document.getElementById("firstPage").style.display = "none";
+        document.getElementById("secondPage").style.display = "block";
+    }
+
+    var compliments = ["Kind", "Beautiful", "Breathtaking", "Intelligent", "Inspiring", "Caring", "Wise", "Creative", "Supportive", "Motivating", "Positive", "Warm-hearted", "Talented", "Energetic", "Empathetic", "Fair-minded", "Sincere", "Harmonious", "Charismatic", "Optimistic", "Irreplaceable", "Marvelous", "Stunning", "Gorgeous"];
+    var currentIndex = 0;
+
+    function showCompliment() {
+        var compliment = compliments[currentIndex];
+        alert(compliment);
+        currentIndex = (currentIndex + 1) % compliments.length;
+    }
+</script>
+
+</body>
+</html>
