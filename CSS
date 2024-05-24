@@ -1,0 +1,25 @@
+.container {
+    text-align: center;
+}
+
+.next-page {
+    display: none;
+}
+
+#compliment-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+    border: none;
+    cursor: pointer;
+}
+
+#compliments {
+    margin-top: 20px;
+    display: none;
+}
+
+.compliment {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
