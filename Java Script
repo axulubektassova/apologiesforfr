@@ -1,0 +1,53 @@
+const nextPageButton = document.querySelector('.container img');
+const nextPage = document.querySelector('.next-page');
+const complimentButton = document.querySelector('#compliment-button');
+const complimentsContainer = document.querySelector('#compliments');
+const compliments = [
+    'Kind',
+    'Beautiful',
+    'Breathtaking',
+    'Intelligent',
+    'Inspiring',
+    'Caring',
+    'Wise',
+    'Creative',
+    'Supportive',
+    'Motivating',
+    'Positive',
+    'Warm-hearted',
+    'Talented',
+    'Energetic',
+    'Empathetic',
+    'Fair-minded',
+    'Sincere',
+    'Harmonious',
+    'Charismatic',
+    'Optimistic',
+    'Irreplaceable',
+    'Marvelous',
+    'Stunning',
+    'Gorgeous'
+];
+let currentComplimentIndex = 0;
+
+nextPageButton.addEventListener('click', () => {
+    nextPage.style.display = 'block';
+});
+
+complimentButton.addEventListener('click', () => {
+    if (complimentsContainer.style.display === 'none') {
+        complimentsContainer.style.display = 'block';
+    }
+
+    const currentCompliment = compliments[currentComplimentIndex];
+    const complimentElement = document.createElement('p');
+    complimentElement.classList.add('compliment');
+    complimentElement.textContent = currentCompliment;
+    complimentsContainer.appendChild(complimentElement);
+
+    currentComplimentIndex++;
+
+    if (currentComplimentIndex === compliments.length) {
+        currentComplimentIndex = 0;
+    }
+});
